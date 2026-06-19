@@ -25,7 +25,7 @@
 .lista {
   max-width: 680px;
   margin: 0 auto;
-  padding: 4px 6px 24px;
+  padding: 4px 6px 80px; /* espaco extra embaixo para nao cobrir com o FAB */
 }
 
 .erro {
@@ -39,7 +39,6 @@
   font-size: 0.88rem;
 }
 
-/* Links de navegacao no header */
 .nav-link {
   --color: #a99fb8;
   font-size: 0.82rem;
@@ -50,4 +49,11 @@
 
 .nav-link.ativo {
   --color: #ffd76a;
+}
+
+/* Botao flutuante de nova carta */
+.fab-novo {
+  --background: linear-gradient(135deg, #2c6fd6, #8b5cf6);
+  --background-activated: #2c6fd6;
+  --color: #fff;
 }

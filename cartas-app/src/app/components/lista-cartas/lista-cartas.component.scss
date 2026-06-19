@@ -4,21 +4,19 @@
   margin: 12px 10px;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-left: 4px solid #555; /* sobrescrito pela identidade de cor */
+  border-left: 4px solid #555;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   color: #e8e3ee;
 }
 
-/* Borda lateral conforme a cor da carta (Grixis: U / B / R) */
-.carta.id-u { border-left-color: #3b82f6; }   /* azul   */
-.carta.id-b { border-left-color: #8b5cf6; }   /* preto -> roxo legivel */
-.carta.id-r { border-left-color: #ef4444; }   /* vermelho */
+.carta.id-u { border-left-color: #3b82f6; }
+.carta.id-b { border-left-color: #8b5cf6; }
+.carta.id-r { border-left-color: #ef4444; }
 .carta.id-w { border-left-color: #e8e1c5; }
 .carta.id-g { border-left-color: #22c55e; }
 .carta.id-incolor { border-left-color: #6b7280; }
 
-/* ===== Topo: nome + tipo + custo ===== */
 .carta-topo {
   display: flex;
   align-items: flex-start;
@@ -44,7 +42,6 @@
   color: #a99fb8;
 }
 
-/* ===== Pips de mana ===== */
 .custo-mana {
   display: flex;
   gap: 4px;
@@ -71,7 +68,6 @@
 .mana-c { background: #b9b2c4; color: #1a1a1a; }
 .mana-generico { background: #cbc5d2; color: #1a1a1a; }
 
-/* ===== Corpo (texto da carta) ===== */
 .carta-corpo {
   padding: 0 14px 10px;
 }
@@ -84,12 +80,12 @@
   font-style: italic;
 }
 
-/* ===== Rodape: CMC + preco ===== */
+/* ===== Rodape: CMC + acoes + preco ===== */
 .carta-rodape {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 14px;
+  padding: 6px 10px 6px 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(0, 0, 0, 0.2);
 }
@@ -100,8 +96,21 @@
   letter-spacing: 0.5px;
 }
 
+.acoes {
+  display: flex;
+  gap: 2px;
+}
+
+.acao-editar {
+  --color: #6ea8fe;
+}
+
+.acao-excluir {
+  --color: #ff7a72;
+}
+
 .preco {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #ffd76a; /* dourado para o preco */
+  color: #ffd76a;
 }

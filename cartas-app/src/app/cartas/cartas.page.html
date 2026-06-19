@@ -1,7 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="toolbar-grixis">
     <ion-title>Coleção Magic</ion-title>
-    <!-- Navegacao no header -->
     <ion-buttons slot="end">
       <ion-button class="nav-link" routerLink="/home">Home</ion-button>
       <ion-button class="nav-link ativo" routerLink="/cartas">Cartas</ion-button>
@@ -16,16 +15,26 @@
     </ion-toolbar>
   </ion-header>
 
-  <!-- Mensagem de erro, se a API estiver offline -->
   <div *ngIf="erro" class="erro">{{ erro }}</div>
 
-  <!-- Contador de cartas lidas da API -->
   <div class="contador" *ngIf="!erro">
     <span class="contador-num">{{ cartas.length }}</span> cartas na coleção
   </div>
 
-  <!-- Coluna centralizada com largura maxima -->
+  <!-- Cada carta recebe os handlers de editar/excluir -->
   <div class="lista">
-    <app-lista-cartas *ngFor="let c of cartas" [carta]="c"></app-lista-cartas>
+    <app-lista-cartas
+      *ngFor="let c of cartas"
+      [carta]="c"
+      (editar)="editarCarta($event)"
+      (excluir)="excluirCarta($event)"
+    ></app-lista-cartas>
   </div>
+
+  <!-- Botao flutuante para CRIAR nova carta -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button class="fab-novo" (click)="novaCarta()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

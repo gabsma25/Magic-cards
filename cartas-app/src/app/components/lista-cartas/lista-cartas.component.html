@@ -5,7 +5,6 @@
       <span class="carta-tipo">{{ carta.tipo }}</span>
     </div>
 
-    <!-- Custo de mana: cada simbolo vira um circulo colorido -->
     <div class="custo-mana">
       <span
         *ngFor="let s of simbolosMana"
@@ -22,6 +21,26 @@
 
   <div class="carta-rodape">
     <span class="valor-mana" title="Valor de mana">CMC {{ carta.valor_mana }}</span>
+
+    <div class="acoes">
+      <ion-button
+        fill="clear"
+        size="small"
+        class="acao-editar"
+        (click)="editar.emit(carta)"
+      >
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button
+        fill="clear"
+        size="small"
+        class="acao-excluir"
+        (click)="excluir.emit(carta)"
+      >
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+    </div>
+
     <span class="preco">R$ {{ carta.preco | number: '1.2-2' }}</span>
   </div>
 </ion-card>

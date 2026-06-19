@@ -1,0 +1,30 @@
+.toolbar-grixis {
+  --background: #14101c;
+  --color: #f0ebf7;
+}
+
+.form-grixis {
+  --background: radial-gradient(circle at 50% 0%, #1c1426 0%, #0c0910 70%);
+}
+
+.form-lista {
+  background: transparent;
+  padding: 8px 8px 0;
+}
+
+.form-item {
+  --background: rgba(255, 255, 255, 0.04);
+  --color: #e8e3ee;
+  --border-radius: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.botao-salvar {
+  margin: 16px 12px 24px;
+  --background: linear-gradient(90deg, #2c6fd6, #8b5cf6);
+  --color: #fff;
+  --border-radius: 12px;
+  font-weight: 700;
+  height: 48px;
+}
