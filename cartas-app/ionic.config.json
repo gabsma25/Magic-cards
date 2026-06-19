@@ -1,0 +1,7 @@
+{
+  "name": "cartas-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
