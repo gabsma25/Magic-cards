@@ -1,0 +1,107 @@
+/* ===== Card base — tema Grixis sombrio ===== */
+.carta {
+  --background: linear-gradient(160deg, #1a1320 0%, #120d18 55%, #0d0a12 100%);
+  margin: 12px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 4px solid #555; /* sobrescrito pela identidade de cor */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  color: #e8e3ee;
+}
+
+/* Borda lateral conforme a cor da carta (Grixis: U / B / R) */
+.carta.id-u { border-left-color: #3b82f6; }   /* azul   */
+.carta.id-b { border-left-color: #8b5cf6; }   /* preto -> roxo legivel */
+.carta.id-r { border-left-color: #ef4444; }   /* vermelho */
+.carta.id-w { border-left-color: #e8e1c5; }
+.carta.id-g { border-left-color: #22c55e; }
+.carta.id-incolor { border-left-color: #6b7280; }
+
+/* ===== Topo: nome + tipo + custo ===== */
+.carta-topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 14px 8px;
+}
+
+.carta-nome {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #f4f0fa;
+}
+
+.carta-tipo {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #a99fb8;
+}
+
+/* ===== Pips de mana ===== */
+.custo-mana {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.pip {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.mana-w { background: #f8f4e3; color: #1a1a1a; }
+.mana-u { background: #2c6fd6; color: #fff; }
+.mana-b { background: #2a2233; color: #d9cce6; }
+.mana-r { background: #d6332c; color: #fff; }
+.mana-g { background: #1f9d54; color: #fff; }
+.mana-c { background: #b9b2c4; color: #1a1a1a; }
+.mana-generico { background: #cbc5d2; color: #1a1a1a; }
+
+/* ===== Corpo (texto da carta) ===== */
+.carta-corpo {
+  padding: 0 14px 10px;
+}
+
+.carta-texto {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: #cbc2d6;
+  font-style: italic;
+}
+
+/* ===== Rodape: CMC + preco ===== */
+.carta-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.valor-mana {
+  font-size: 0.72rem;
+  color: #9a90a8;
+  letter-spacing: 0.5px;
+}
+
+.preco {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffd76a; /* dourado para o preco */
+}

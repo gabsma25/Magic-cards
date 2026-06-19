@@ -1,13 +1,31 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cartas</ion-title>
+  <ion-toolbar class="toolbar-grixis">
+    <ion-title>Coleção Magic</ion-title>
+    <!-- Navegacao no header -->
+    <ion-buttons slot="end">
+      <ion-button class="nav-link" routerLink="/home">Home</ion-button>
+      <ion-button class="nav-link ativo" routerLink="/cartas">Cartas</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="conteudo-grixis">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cartas</ion-title>
+    <ion-toolbar class="toolbar-grixis">
+      <ion-title size="large">Coleção Magic</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Mensagem de erro, se a API estiver offline -->
+  <div *ngIf="erro" class="erro">{{ erro }}</div>
+
+  <!-- Contador de cartas lidas da API -->
+  <div class="contador" *ngIf="!erro">
+    <span class="contador-num">{{ cartas.length }}</span> cartas na coleção
+  </div>
+
+  <!-- Coluna centralizada com largura maxima -->
+  <div class="lista">
+    <app-lista-cartas *ngFor="let c of cartas" [carta]="c"></app-lista-cartas>
+  </div>
 </ion-content>

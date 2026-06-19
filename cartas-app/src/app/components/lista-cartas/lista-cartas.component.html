@@ -1,0 +1,27 @@
+<ion-card class="carta" [ngClass]="classeIdentidade">
+  <div class="carta-topo">
+    <div class="carta-titulo">
+      <h2 class="carta-nome">{{ carta.nome }}</h2>
+      <span class="carta-tipo">{{ carta.tipo }}</span>
+    </div>
+
+    <!-- Custo de mana: cada simbolo vira um circulo colorido -->
+    <div class="custo-mana">
+      <span
+        *ngFor="let s of simbolosMana"
+        class="pip"
+        [ngClass]="s.classe"
+        >{{ s.texto }}</span
+      >
+    </div>
+  </div>
+
+  <div class="carta-corpo">
+    <p class="carta-texto">{{ carta.conteudo }}</p>
+  </div>
+
+  <div class="carta-rodape">
+    <span class="valor-mana" title="Valor de mana">CMC {{ carta.valor_mana }}</span>
+    <span class="preco">R$ {{ carta.preco | number: '1.2-2' }}</span>
+  </div>
+</ion-card>

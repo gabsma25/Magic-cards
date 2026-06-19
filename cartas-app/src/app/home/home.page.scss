@@ -1,27 +1,57 @@
-#container {
+.toolbar-grixis {
+  --background: #14101c;
+  --color: #f0ebf7;
+}
+
+.home-grixis {
+  --background: radial-gradient(circle at 50% 30%, #1c1426 0%, #0c0910 70%);
+}
+
+.home-centro {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 18vh 24px 0;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.home-titulo {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ef4444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.home-sub {
+  color: #a99fb8;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0 0 36px;
 }
 
-#container a {
-  text-decoration: none;
+.botao-entrar {
+  --background: linear-gradient(90deg, #2c6fd6, #8b5cf6);
+  --background-activated: #2c6fd6;
+  --color: #fff;
+  --border-radius: 12px;
+  --box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  height: 50px;
+}
+
+/* Links de navegacao no header */
+.nav-link {
+  --color: #a99fb8;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+
+.nav-link.ativo {
+  --color: #ffd76a;
 }
